@@ -1,0 +1,74 @@
+kits:
+  Starter:
+    price: 50
+    items:
+      - type: STONE_SWORD
+        amount: 1
+      - type: COOKED_CHICKEN
+        amount: 10
+      - type: CHAINMAIL_HELMET
+        amount: 1
+      - type: CHAINMAIL_CHESTPLATE
+        amount: 1
+      - type: CHAINMAIL_LEGGINGS
+        amount: 1
+      - type: CHAINMAIL_BOOTS
+        amount: 1
+
+  Ranger:
+    price: 50
+    items:
+      - type: WOODEN_AXE
+        amount: 1
+      - type: BOW
+        amount: 1
+      - type: COOKED_PORKCHOP
+        amount: 6
+      - type: GOLDEN_APPLE
+        amount: 1
+      - type: ARROW
+        amount: 64
+      - type: LEATHER_HELMET
+        amount: 1
+      - type: LEATHER_CHESTPLATE
+        amount: 1
+      - type: LEATHER_LEGGINGS
+        amount: 1
+      - type: LEATHER_BOOTS
+        amount: 1
+
+  Tank:
+    price: 75
+    items:
+      - type: IRON_SWORD
+        amount: 1
+      - type: SHIELD
+        amount: 1
+      - type: COOKED_BEEF
+        amount: 5
+      - type: IRON_HELMET
+        amount: 1
+      - type: IRON_CHESTPLATE
+        amount: 1
+      - type: IRON_LEGGINGS
+        amount: 1
+      - type: IRON_BOOTS
+        amount: 1
+
+  Scout:
+    price: 50
+    items:
+      - type: STONE_AXE
+        amount: 1
+      - type: COOKED_RABBIT
+        amount: 6
+      - type: LAVA_BUCKET
+        amount: 1
+      - type: LEATHER_HELMET
+        amount: 1
+      - type: LEATHER_CHESTPLATE
+        amount: 1
+      - type: LEATHER_LEGGINGS
+        amount: 1
+      - type: LEATHER_BOOTS
+        amount: 1
