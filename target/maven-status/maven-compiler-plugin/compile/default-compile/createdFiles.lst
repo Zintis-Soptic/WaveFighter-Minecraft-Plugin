@@ -1,9 +1,0 @@
-zintis\id\lv\waveFighter\wave\WaveManager.class
-zintis\id\lv\waveFighter\command\CommandManager.class
-zintis\id\lv\waveFighter\WaveFighter.class
-zintis\id\lv\waveFighter\kit\KitManager.class
-zintis\id\lv\waveFighter\messager\Message.class
-zintis\id\lv\waveFighter\coin\CoinManager.class
-zintis\id\lv\waveFighter\config\Config.class
-zintis\id\lv\waveFighter\kit\Kit.class
-zintis\id\lv\waveFighter\kit\KitLoader.class
