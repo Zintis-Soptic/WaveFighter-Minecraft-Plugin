@@ -6,15 +6,17 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import zintis.id.lv.waveFighter.command.CommandManager;
+import zintis.id.lv.waveFighter.listener.PlayerJoin;
 import zintis.id.lv.waveFighter.messager.Message;
 
 import java.util.Objects;
 
-public final class WaveFighter extends JavaPlugin implements Listener {
+public final class WaveFighter extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(this, this);
+
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 
         CommandManager commandManager = new CommandManager(this);
         Objects.requireNonNull(getCommand("startwave")).setExecutor(commandManager);
@@ -27,13 +29,6 @@ public final class WaveFighter extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
 
-    }
-
-    @EventHandler
-    private void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-
-        player.sendMessage(Message.INFO_PLAYER_JOIN);
     }
 
 }
