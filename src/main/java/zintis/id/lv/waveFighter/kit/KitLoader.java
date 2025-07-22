@@ -3,10 +3,9 @@ package zintis.id.lv.waveFighter.kit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.yaml.snakeyaml.Yaml;
+import zintis.id.lv.waveFighter.config.YmlLoader;
 import zintis.id.lv.waveFighter.messager.Message;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,17 +18,11 @@ public class KitLoader {
         this.plugin = plugin;
     }
 
-    public List<Kit> loadKits(InputStream stream) {
+    public List<Kit> loadKits() {
         List<Kit> kits = new ArrayList<>();
-        Yaml yaml = new Yaml();
+        YmlLoader loader = new YmlLoader(plugin);
 
-        Map<String, Object> root = yaml.load(stream);
-        if (root == null || !root.containsKey("kits")) {
-            plugin.getLogger().warning(Message.ERROR_NO_KIT_FILE_FOUND);
-            return kits;
-        }
-
-        Map<String, Object> kitMap = (Map<String, Object>) root.get("kits");
+        Map<String, Object> kitMap = (Map<String, Object>) loader.load("kits.yml");
 
         for (Map.Entry<String, Object> entry : kitMap.entrySet()) {
             String kitName = entry.getKey();

@@ -11,22 +11,14 @@ import java.util.*;
 
 public class KitManager {
 
-    private final KitLoader kitLoader;
     private final List<Kit> loadedKits = new ArrayList<>();
 
     private final JavaPlugin plugin;
 
     public KitManager(JavaPlugin plugin) {
         this.plugin = plugin;
-        kitLoader = new KitLoader(plugin);
 
-        InputStream stream = plugin.getResource("Kits.yml");
-        if (stream == null) {
-            plugin.getLogger().warning(Message.ERROR_NO_KIT_FILE_FOUND);
-            return;
-        }
-
-        loadedKits.addAll(kitLoader.loadKits(stream));
+        loadedKits.addAll(new KitLoader(plugin).loadKits());
     }
 
     public List<Kit> getLoadedKits() {
